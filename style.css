@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+* {
+	box-sizing: border-box;
+    font-family: 'Outfit',sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("background.jpg");
+	background-size: cover;
+}
+
+.container {
+	overflow: hidden;
+	width: 850px;
+	height: 600px;
+    
+    border-radius: 50px 0px 0px 50px ;
+
+    display: flex;
+    
+	background: rgba(20, 32, 32,.8);
+    border: 2px solid rgba(0,0,0,.18);
+    box-shadow: 0 8px 32px 0 rgba(2, 2, 7, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.sidebar{
+    width: 250px;
+    display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	
+
+}
+
+.grid{
+    display: grid;
+    background-color: white;
+    width: 600px;
+    height: 600px;
+	
+    
+}
+
+input[type="radio"] {
+	appearance: none;
+	position: absolute;
+}
+.color-input {
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	margin-bottom: -15px;
+	margin-top: 30px;
+	transition: .2s ease-in-out;
+}
+.color-input::-webkit-color-swatch-wrapper{
+	padding: 0px;
+}
+.color-input::-webkit-color-swatch{
+	border-radius: 50%;
+	border: 2px solid rgb(40, 231, 43);
+}
+
+.color-input:hover{
+	transform: scale(1.05);
+}
+
+label{
+	color: rgb(40, 231, 43);
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	border: 2px solid rgb(40, 231, 43);
+	border-radius: 40px;
+	transition: .2s ease-in-out;
+}
+
+label:hover,.clear-button:hover{
+	background-color: rgb(40, 231, 43);
+	color: white;
+}
+
+input[type=radio]:checked + label{
+	background-color: rgb(40, 231, 43);
+	color: white;
+}
+
+.clear-button{
+	color: rgb(40, 231, 43);
+	cursor: pointer;
+	background: none;
+	width: 200px;
+	height: 50px;
+	font-size: 1.1rem;
+	border: 2px solid rgb(40, 231, 43);
+	border-radius: 40px;
+	transition: .2s ease-in-out;
+}
+
+#slider-input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 5px;
+    background: white;
+    border-radius: 50px;
+    outline: none;
+}
+
+#slider-input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgb(63, 219, 66);
+    cursor: pointer;
+    transition: .1s;
+}
+
+#slider-input::-webkit-slider-thumb:hover{
+    transform: scale(1.1);
+}
